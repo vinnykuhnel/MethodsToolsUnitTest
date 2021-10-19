@@ -18,3 +18,10 @@ def test_displayItem_inRange():
 
 def test_displayItem_nullInput():
     assert displayItem(None, 5) == None
+
+#test negative indexing
+def test_displayItem_negIn():
+    assert displayItem([1, 2, 3, 4, 5, 6], -5) == None
+
+def test_displayItem_negOut():
+    assert displayItem([1, 2, 3, 4, 5, 6], -10) == None
