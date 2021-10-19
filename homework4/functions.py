@@ -56,4 +56,5 @@ def greetUser(first, middle, last):
 ## takes in a Python list
 ## attempts to display the item at the index provided
 def displayItem(numbers, index):
-    print("Your item at", index, "index is", numbers[index])
+    if numbers and (abs(len(numbers)) + 1) > index: 
+        print("Your item at", index, "index is", numbers[index])
