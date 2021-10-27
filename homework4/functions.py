@@ -23,13 +23,18 @@ def dist(x1, y1, x2, y2):
 ## takes in a string -- reverses it
 ## then compares the two
 def isPalindrome(temp):
-    test = temp[::-1]
+    try:
+        test = temp[::-1]
 
-    if(test == temp):
-        return True
+        if(test == temp):
+            return True
 
-    else:
+        else:
+            return False
+    except:
+        print("This is not a valid input")
         return False
+
 
 ## has input to receive two numbers
 ## divides the two, then outputs the result
@@ -43,7 +48,11 @@ def divide():
 
 ## returns the squareroot of a particular number
 def sq(num):
-    return math.sqrt(num)
+    try:
+        return math.sqrt(num)
+    except:
+        print("This is not an allowed value for num")
+
 
 ## grabs user's name
 ## greets them by their entire name
