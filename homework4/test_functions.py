@@ -20,7 +20,7 @@ def test_numbers_fix():
 
     assert numbers(5,2) == 2.5
 
-#Tests for displayItem function
+#Tests for greetUser function
 def test_greetUser_specialChars():
     assert greetUser('i', '\n', '\t') == None
 
@@ -30,7 +30,7 @@ def test_greetUser_strs():
 def test_greetUser():
     assert greetUser(True, 5.0, None) == None
 
-#tests for greetUser function
+#tests for displayItem function
 def test_displayItem():
     assert displayItem([], 5) == None
 
