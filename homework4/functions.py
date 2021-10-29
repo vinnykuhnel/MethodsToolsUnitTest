@@ -40,7 +40,6 @@ def isPalindrome(temp):
 ## has input to receive two numbers
 ## divides the two, then outputs the result
 def divide():
-    def divide():
 
     num1 = int(input("Enter a number: "))
 
