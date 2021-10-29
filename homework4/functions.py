@@ -3,9 +3,17 @@ import math
 ## opens a file in read mode
 ## filename received as a parameter
 def openFile(filename):
-    infile = open(filename, "r")
+    try:
+        infile = open(filename, "r")
 
-    print("File opened.")
+        print("File opened.")
+
+    except ValueError:
+        print("This is not a valid input. Try again, please")
+
+    except FileNotFoundError:
+        print("An error occurred")
+
 
 ## takes two numbers and returns
 ## the result of a division
@@ -16,10 +24,15 @@ def numbers(num1, num2):
 ## takes in two points
 ## finds the distance between the points
 def dist(x1, y1, x2, y2):
-    dist = (x2 - x1) ** 2 + (y2 - y1) ** 2
-    dist = math.sqrt(dist)
+    try:
+        dist = float(x2 - x1) ** 2 + float(y2 - y1) ** 2
+        dist = math.sqrt(dist)
 
-    return dist
+        return round(dist)
+
+    except ValueError:
+        print("This is not a valid input. Try again, please.")
+
 
 ## takes in a string -- reverses it
 ## then compares the two
