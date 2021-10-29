@@ -10,7 +10,8 @@ def openFile(filename):
 ## takes two numbers and returns
 ## the result of a division
 def numbers(num1, num2):
-    return num1 / num2
+    if num2 != 0:
+        return float(num1) /float(num2)
 
 ## takes in two points
 ## finds the distance between the points
@@ -39,10 +40,17 @@ def isPalindrome(temp):
 ## has input to receive two numbers
 ## divides the two, then outputs the result
 def divide():
+    def divide():
+
     num1 = int(input("Enter a number: "))
+
     num2 = int(input("Enter another number: "))
 
-    div = num1 / num2
+
+    if num2 != 0:
+        div = float(num1) /float(num2)
+
+
 
     print("Your numbers divided is:", div)
 
