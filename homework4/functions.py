@@ -1,3 +1,8 @@
+#Della Jones dj1069
+#Teddy Lander tel127
+#Raleigh Bumpers reb560
+#Adam Kuhnel vak58
+
 import math
 
 ## opens a file in read mode
