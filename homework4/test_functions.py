@@ -15,9 +15,10 @@ def test_numbers_fail():
 
 ## test numbers with dividing with remainders
 
+#purposely failing test case
 def test_numbers_fix():
 
-    assert numbers(5,2)== 2.5
+    assert numbers(5,2) == 2.5
 
 #Tests for greetUser function
 def test_greetUser_specialChars():
