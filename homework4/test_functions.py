@@ -1,6 +1,24 @@
 import pytest
 from functions import *
 
+## pytest testing function 1: testing correct input
+
+def test_numbers():
+
+    assert numbers(6,2) == 3
+
+## purposefully failing numbers function
+
+def test_numbers_fail():
+
+    assert numbers(8,4) == 5
+
+## test numbers with dividing with remainders
+
+def test_numbers_fix():
+
+    assert numbers(5,2)== 2.5
+
 #Tests for greetUser function
 def test_greetUser_specialChars():
     assert greetUser('i', '\n', '\t') == None
