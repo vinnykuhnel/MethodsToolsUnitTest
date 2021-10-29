@@ -43,6 +43,105 @@ def test_numbers_fail():
 def test_numbers_fix():
 
     assert numbers(5,2) == 2.5
+    
+ # isPalindrome test cases
+@pytest.mark.parametrize("temp,palindrome",[("madam",True),("racecar",True),("bob",True),("peanut",False),("A5B8C10",False),(10101,False)])
+def test_isPalindrome(temp,palindrome):
+    assert isPalindrome(temp) == palindrome
+
+#divide test cases
+##multiple inputs
+
+def geninputs():
+
+    inputs = ["6","3"]
+
+    for item in inputs:
+
+        yield item
+
+##sets our inputs
+
+GEN = geninputs()
+
+
+
+##test 1 for divide where it works
+
+def test_divide(monkeypatch):
+
+    monkeypatch.setattr('builtins.input', lambda _: next(GEN))
+
+
+
+    assert divide() == None
+
+
+
+##multiple inputs test 2
+
+def wronginputs():
+
+    inputs = ["8","4"]
+
+
+
+    for item in inputs:
+
+        yield item
+
+## set up inputs
+
+WRO = wronginputs()
+
+
+
+##test 2 for divide where it fails
+
+def test_divide_fail(monkeypatch):
+
+    monkeypatch.setattr('builtins.input', lambda _: next(WRO))
+
+
+
+    assert divide() == 3.0
+
+## test output for dividing with remainders
+
+def fixinputs():
+
+    inputs = ["5","2"]
+
+
+
+    for item in inputs:
+
+        yield item
+
+## set up inputs
+
+FIX = fixinputs()
+
+
+
+##test 3 for divide: fixed code so remainders are allowed
+
+def test_divide_fix(monkeypatch):
+
+    monkeypatch.setattr('builtins.input', lambda _: next(FIX))
+
+
+
+    assert divide() == None
+
+    
+# test cases for sq
+@pytest.mark.parametrize("num, sqr", [(25,5),(49,7),(-30,None),("abc",None)])
+
+def test_sq(num,sqr):
+    assert sq(num) == sqr
+
+ 
 
 #Tests for greetUser function
 def test_greetUser_specialChars():
