@@ -3,13 +3,13 @@ from functions import *
 
 #import file test cases
 def test_openFile_correct():
-    assert open("test.txt")
+    assert openFile("test.txt") == None
 
 def test_openFile_data():
-    assert open(4)
+    assert openFile(4) == None
 
 def test_openFile_not():
-    assert open("rest.txt")
+    assert openFile("rest.txt") == None
 
 #dist test cases
 def test_dist_correct():
@@ -18,9 +18,11 @@ def test_dist_correct():
 def test_dist_round():
     assert dist(-3.0, 4.0, 2.0, 1.0) == 6.0
 
+#meant to fail
 def test_dist_incorrect():
     assert dist(9.0, 4.0, 3.0, 1.0) == 51.0
 
+#meant to fail
 def test_dist_data():
     assert dist("two", 3.0, 6.0, 5.0) == 10.0
 
@@ -31,7 +33,7 @@ def test_numbers():
 
     assert numbers(6,2) == 3
 
-## purposefully failing numbers function
+## purposefully FAILING numbers function
 
 def test_numbers_fail():
 
@@ -96,7 +98,7 @@ WRO = wronginputs()
 
 
 
-##test 2 for divide where it fails
+##test 2 for divide where it FAILS
 
 def test_divide_fail(monkeypatch):
 
